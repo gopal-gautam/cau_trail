@@ -1,0 +1,115 @@
+#s_menu {
+    margin-top: 20px;
+    height: 50px;
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+    -webkit-transition-duration: 500ms;
+            transition-duration: 500ms;
+}
+
+#s_menu li :hover {
+    background-color: #eac43d;
+    color: #69329E;
+}
+
+#s_menu a {
+    margin-right: 15px;
+    border-radius: 5px 5px 0 0;
+    /* color: #69329E; */
+    color: #000;
+}
+
+.is-sticky .s_menu {
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.15);
+    -webkit-transition-duration: 500ms;
+            transition-duration: 500ms;
+}
+
+.search_area {
+    border: 3px solid #eac43d;
+    border-radius: 50px;
+}
+
+.search_area form {
+    position: relative;
+    z-index: 1;
+}
+
+.search_area input.form-control, .search_area select.form-control {
+    /* border: 2px solid #f4f6f8; */
+    border: none;
+    background-color: transparent;
+    font-size: 12px;
+    height: 45px !important;
+}
+
+.search_area select {
+    -moz-appearance: window;
+    -webkit-appearance: none;
+    background: url(../images/updown-scaled.png) no-repeat right ;
+}
+
+.search_area input.form-control:focus, select.form-control:focus {
+    /* border: 2px solid #f4f6f8; */
+    box-shadow: none;
+}
+
+.search_area button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    padding: 0;
+    background-color: transparent;
+    /* border: medium none; */
+    box-shadow: none;
+    cursor: pointer;
+    height: 45px;
+    color: #eac43d;
+}
+
+.o_icons a {
+    font-size: 30px;
+    line-height: 1;
+    transition: all 500ms ease 0s;
+    text-decoration: none;
+    outline: none;
+    color: #3a3a3a;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin-right: 20px;
+}
+
+.o_icons small {
+    margin-left: -19px;
+}
+
+.o_icons :hover {
+    color: #eac43d;
+}
+
+.o_icons .shop-bag {
+    display: inline-block;
+    position: relative;
+}
+
+.shop-bag .notf {
+    position: absolute;
+    top: 20px;
+    left: 13px;
+    background-color: #eac43d;
+    border-radius: 50%;
+    padding: 0 4px;
+    color: #fff;
+    font-size: 0.7em;
+}
+.o_icons :hover  .notf{
+    background: #000;
+    color: #fff;
+}
+
+.payments-logo img {
+    display: inline-block;
+    margin-left: 20px;
+}

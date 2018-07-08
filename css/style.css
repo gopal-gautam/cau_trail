@@ -113,3 +113,5 @@
     display: inline-block;
     margin-left: 20px;
 }
+
+#map { height: 380px; }

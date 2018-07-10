@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="node_modules/leaflet/dist/leaflet.css">
+    <title>CaptainAU</title>
+</head>
+
+<body>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+        <h5 class="my-0 mr-md-auto font-weight-normal">CaptionAU</h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+          <a class="p-2 text-dark" href="#"><i class="fa fa-map-marker-alt"></i> Store locator</a>
+          <a class="p-2 text-dark" href="#">Whole seller locator</a>
+          <a class="p-2 text-dark" href="#">Track your Order</a>
+          <a class="p-2 text-dark" href="#"><i class="fa fa-shopping-bag"></i> Shop</a>
+          <a class="p-2 text-dark" href="#"><i class="fa fa-user"></i> My Account</a>
+        </nav>
+      </div>
+
+      <!-- Bottom Header Area Start -->
+      <div class="bottom-header-area" id="stickyHeader">
+            <div class="main_header_area">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <!-- Logo Area Start -->
+                        <div class="col-6 col-md-3">
+                            <div class="logo_area">
+                                <a href="index.html"><img src="images/logo-base.png" alt="" srcset=""></a>
+                            </div>
+                        </div>
+                        <!-- Search Area Start -->
+                        <div class="col-12 col-md-6">
+                            <div class="search_area">
+                                <form action="#" method="get" class="row">
+                                    <input type="search" class="form-control col-8 d-inline pl-4" id="search" aria-describedby="search" placeholder="Search for Products">
+                                    <select class="form-control d-inline col-3 text-right">
+                                        <option>All Categories</option>
+                                        <option value="cat1">Category 1</option>
+                                    </select>
+                                    <button type="submit" class="btn btn-link col-1 pr-4"><i class="fas fa-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- Hero Meta Area Start -->
+                        <div class="col-6 col-md-3">
+                            <div class="d-flex text-right align-items-center justify-content-end">
+                                <div class="o_icons">
+                                    <a href="#"><i class="fa fa-sync-alt"></i></a>
+                                    <a href="#"><i class="fa fa-heart"></i></a>
+                                    <div class="shop-bag">
+                                            <a href="#"><i class="fa fa-shopping-bag"></i></a>
+                                            <div class="notf">0</div>
+                                            <small>$0.00</small>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      </div>
+
+      <div id="s_menu">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Our Services
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Smile for money</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Top selling</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">New arrivals</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Captain Au professional cases</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Welcome</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Product
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="#">Product1</a>
+                              <a class="dropdown-item" href="#">Product2</a>
+                              <a class="dropdown-item" href="#">Product3</a>
+                            </div>
+                          </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Reseller inquiry</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact us</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+        </div>
+    </div>
+  
+    <!--Shop locator start-->
+    <div class="map-container mt-5 pt-4">
+        <form action="" method="get">            
+            <div class="row form-group">
+                    <label for="" class="label-control col-1 pt-2">Location</label>
+                    <select name="location" class="form-control col-3">
+                        <option value="" selected>Sydney</option>
+                        <option value="">Melbourne</option>
+                    </select>
+                    <input type="checkbox" name="" id="" class="ml-5 mt-3"><label for="" class="label-control col-3 pt-2">Show near shops</label>
+                    <button class="btn btn-lg btn-info col-2">Filter</button>
+            </div>            
+        </form>
+        <div id="map" class="mt-3"></div>
+    </div>
+    
+    <!--Shop locator ends-->
+  
+      <div class="container-fluid">
+  
+        <footer class="pt-4 my-md-5 pt-md-5 border-top">
+          <div class="row">
+            <div class="col-12 col-md">
+              <img class="mb-2" src="images/logo.png" alt="">
+              <h6>Contact Info</h6>              
+              <div class="d-block mb-3 text-muted">
+                  <small class="d-block">info@captainau.com.au</small>
+                  <small class="d-block">Sydney, NSW</small>
+                  <small class="d-block">Australia</small>
+              </div>
+              <div class="d-block">
+                  <i class="fab fa-facebook-f mr-2"></i>
+                  <i class="fas fa-rss"></i>
+              </div>
+            </div>
+            <div class="col-6 col-md">
+              <h5>Find it fast</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="#">Mobile phone cases</a></li>
+                <li><a class="text-muted" href="#">Power bank</a></li>
+                <li><a class="text-muted" href="#">Nano technology Screen protector</a></li>
+                <li><a class="text-muted" href="#">Tempered Glass</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-md">
+              <h5>CaptionAU</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="#">Welcome</a></li>
+                <li><a class="text-muted" href="#">Resellers</a></li>
+                <li><a class="text-muted" href="#">About us</a></li>
+                <li><a class="text-muted" href="#">Smile for money back deal?</a></li>
+                <li><a class="text-muted" href="#">Services</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row text-muted mt-5">
+              <div class="col-4">&copy; CaptainAU - All right reserved</div>
+              <div class="col-8 text-right payments-logo">
+                  <img src="images/discover-logo.png" alt="">
+                  <img src="images/mastercard-logo.png" alt="">
+                  <img src="images/paypal-logo.png" alt="">
+                  <img src="images/skrill-logo.png" alt="">
+                  <img src="images/visa-logo.png" alt="">
+              </div>
+          </div>
+        </footer>
+      </div>
+
+      <script src="node_modules/jquery/dist/jquery.min.js"></script>
+      <script src="node_modules/popper.js/dist/popper.min.js"></script>
+      <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script src="node_modules/leaflet/dist/leaflet.js"></script>
+      <script>
+          var mymap = L.map('map').setView([-33.8375011, 150.9751541], 10);
+
+          L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox.streets',
+            accessToken: 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw'
+        }).addTo(mymap);
+
+        // var marker = L.marker([51.5, -0.09]).addTo(mymap);
+        // marker.bindPopup("<b>Hello world!</b><br>I am a popup.");
+
+        var planes = [
+		["Mount Druitt",-33.778589, 150.826473],
+		["Blacktown",-33.776168, 150.905126],
+		["parramatta",-33.834262, 151.006356],
+		["Macquarie park",-33.779606, 151.124566],
+		["Forestville",-33.763584, 151.212201],
+		["Burwood",-33.879673, 151.104416],
+		["Artamon",-33.811094, 151.182175],
+		["Central Shop",-33.919251, 151.035682],
+		["Liverpool",-33.917213, 150.926330]
+		];
+
+        // var map = L.map('map').setView([-41.3058, 174.82082], 8);
+        // mapLink = 
+        //     '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+        // L.tileLayer(
+        //     'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        //     attribution: '&copy; ' + mapLink + ' Contributors',
+        //     maxZoom: 18,
+            // }).addTo(map);
+
+		for (var i = 0; i < planes.length; i++) {
+			marker = new L.marker([planes[i][1],planes[i][2]])
+				.bindPopup(planes[i][0])
+				.addTo(mymap);
+		}
+
+      </script>
+</body>
+</html>
